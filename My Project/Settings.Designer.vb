@@ -57,9 +57,9 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("2")>  _
-        Public Property base_setting() As Byte
+        Public Property base_setting() As Integer
             Get
-                Return CType(Me("base_setting"),Byte)
+                Return CType(Me("base_setting"),Integer)
             End Get
             Set
                 Me("base_setting") = value
@@ -89,6 +89,66 @@ Namespace My
                 Me("allsounds_setting") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property runs() As Integer
+            Get
+                Return CType(Me("runs"),Integer)
+            End Get
+            Set
+                Me("runs") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("7")>  _
+        Public Property mouse_sens_setting() As Integer
+            Get
+                Return CType(Me("mouse_sens_setting"),Integer)
+            End Get
+            Set
+                Me("mouse_sens_setting") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("2.5")>  _
+        Public Property Version() As String
+            Get
+                Return CType(Me("Version"),String)
+            End Get
+            Set
+                Me("Version") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property FastExit_setting() As Boolean
+            Get
+                Return CType(Me("FastExit_setting"),Boolean)
+            End Get
+            Set
+                Me("FastExit_setting") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property hourformat24_setting() As Boolean
+            Get
+                Return CType(Me("hourformat24_setting"),Boolean)
+            End Get
+            Set
+                Me("hourformat24_setting") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
@@ -100,9 +160,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.NixieClockbyColonelWhite.My.MySettings
+        Friend ReadOnly Property Settings() As Global.NixieClockbyAlexeyElin.My.MySettings
             Get
-                Return Global.NixieClockbyColonelWhite.My.MySettings.Default
+                Return Global.NixieClockbyAlexeyElin.My.MySettings.Default
             End Get
         End Property
     End Module
